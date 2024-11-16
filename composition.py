@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from re import S
 
 class AnimalMovement:
     __step_counter: int
@@ -54,7 +53,7 @@ class Dog(AnimalWithSound, AnimalThatWalk):
         self.animal_movement.print_steps('Dog')
 
 class Cat(AnimalWithSound, AnimalThatWalk):
-    animal_movement = AnimalMovement()
+    animal_movement: AnimalMovement
     
     def __init__(self):
         self.animal_movement = AnimalMovement()
